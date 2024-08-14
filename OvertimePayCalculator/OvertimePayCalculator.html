@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月想定残業代の計算</title>
+    <link rel="stylesheet" href="OvertimePayCalculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>月残業代計算</h1>
+        <label for="basicSalary">基本月給 (例: 300000円)</label>
+        <input type="number" id="basicSalary" value="300000" required>
+
+        <label for="workDays">月平均出勤日数 (例: 20d)</label>
+        <input type="number" id="workDays" value="20" required>
+
+        <label for="workHours">1日の所定内労働時間 (例: 8h)</label>
+        <input type="number" id="workHours" value="8" required>
+
+        <label for="overtimeRate">残業代割増率 (例: 25%)</label>
+        <input type="number" id="overtimeRate" value="25" required>
+
+        <label for="overtimeHours">月の見込残業時間 (例: 1h)</label>
+        <input type="number" id="overtimeHours" value="1" required>
+
+        <button onclick="calculateOvertimePay()">計算</button>
+
+        <div class="result" id="result">月想定残業代: 0円</div>
+    </div>
+
+    <div class="copy-content">
+        <small class="copy">&copy; 2024 H.F</small>
+    </div>
+
+    <script src="OvertimePayCalculator.js"></script>
+</body>
+</html>
